@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <main>
+      <div id="app" class="container mt-4">
+        <ul class="list-group">
+          <li v-for="todo in todoList" class="list-group-item">
+            <p :class="{'text-decoration-line-through': todo.done }">
+              {{todo.text}}
+            </p>
+            <p>{{todo.done }}</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+
     <!-- vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
